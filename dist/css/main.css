@@ -1,0 +1,88 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#body, .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #444;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+  margin: 45px;
+  height: auto;
+  width: auto;
+}
+
+.container .input-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+  width: 100%;
+}
+
+.container .input-container input {
+  width: 100%;
+}
+
+.container .container-buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+}
+
+.container .container-buttons .btn {
+  background: #a50000;
+  border: none;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+}
+
+.container .container-buttons .btn:active {
+  background: #fff;
+}
+
+/*
+@media (max-width:900px) {
+    .container{
+
+    }
+}
+@media (min-width:900px) {
+    .container{
+        
+    }
+}
+*/
+/*# sourceMappingURL=main.css.map */

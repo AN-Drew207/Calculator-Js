@@ -1,0 +1,58 @@
+@import 'config';
+#body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    @extend #body;
+    align-items: center;
+    background-color: #444;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    margin: 45px;
+    height: auto;
+    width: auto;
+    .input-container{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin: 15px;
+        width:100%;
+        input{
+            width: 100%;
+        }
+    }
+    .container-buttons{
+        display: grid;
+        grid-template-columns: repeat(5,auto);
+        grid-gap: 10px;
+        .btn{
+            background: #a50000;
+            border: none;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            &:active{
+                background: #fff;
+            }
+        }
+    }
+
+
+    
+
+}
+/*
+@media (max-width:900px) {
+    .container{
+
+    }
+}
+@media (min-width:900px) {
+    .container{
+        
+    }
+}
+*/
