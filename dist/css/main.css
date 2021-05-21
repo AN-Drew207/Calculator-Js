@@ -61,7 +61,7 @@
   grid-gap: 10px;
 }
 
-.container .container-buttons .btn {
+.container .container-buttons .btn, .container .container-buttons .submit {
   background: #a50000;
   border: none;
   height: 30px;
@@ -69,7 +69,7 @@
   text-align: center;
 }
 
-.container .container-buttons .btn:active {
+.container .container-buttons .btn:active, .container .container-buttons .submit:active {
   background: #fff;
 }
 

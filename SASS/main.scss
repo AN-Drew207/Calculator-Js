@@ -28,7 +28,7 @@
         display: grid;
         grid-template-columns: repeat(5,auto);
         grid-gap: 10px;
-        .btn{
+        .btn, .submit{
             background: #a50000;
             border: none;
             height: 30px;
