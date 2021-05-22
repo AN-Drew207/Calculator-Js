@@ -29,10 +29,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30px;
-  margin: 45px;
-  height: auto;
-  width: auto;
+  height: 100vh;
+  width: 100vw;
 }
 
 .container .input-container {
@@ -46,14 +44,36 @@
   display: -ms-flexbox;
   display: flex;
   margin: 15px;
-  width: 100%;
+  height: 20vh;
+  background: #000;
+  border-radius: 10px;
+  width: 95vw;
 }
 
 .container .input-container input {
-  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  text-align: right;
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
 }
 
-.container .container-buttons {
+.container .input-container input:active {
+  border: none;
+}
+
+.container .input-container #result {
+  background-color: transparent;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  width: 30%;
+}
+
+.container .container-buttons-basics {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[5];
@@ -61,15 +81,17 @@
   grid-gap: 10px;
 }
 
-.container .container-buttons .btn, .container .container-buttons .submit {
-  background: #a50000;
+.container .container-buttons-basics .btn, .container .container-buttons-basics .submit {
+  background: #4e0000;
   border: none;
-  height: 30px;
-  width: 30px;
+  height: 20vh;
+  width: 10vw;
+  font-size: 20px;
   text-align: center;
+  color: #fff;
 }
 
-.container .container-buttons .btn:active, .container .container-buttons .submit:active {
+.container .container-buttons-basics .btn:active, .container .container-buttons-basics .submit:active {
   background: #fff;
 }
 

@@ -10,30 +10,50 @@
     background-color: #444;
     flex-direction: column;
     justify-content: center;
-    padding: 30px;
-    margin: 45px;
-    height: auto;
-    width: auto;
+    height: 100vh;
+    width: 100vw;
     .input-container{
         justify-content: center;
         align-items: center;
         display: flex;
         margin: 15px;
-        width:100%;
+        height: 20vh;
+        background: #000;
+        border-radius: 10px;
+        width:95vw;
         input{
-            width: 100%;
+            background-color: transparent;
+            border: none; 
+            color: #fff;
+            font-size: 40px;
+            text-align: right;
+            padding: 10px;
+            margin: 10px;
+            width: 70%;
+            &:active{
+                border: none;
+            }
+        }
+        #result{
+            background-color: transparent;
+            color: #fff;
+            font-size: 50px;
+            text-align: center;
+            width: 30%;
         }
     }
-    .container-buttons{
+    .container-buttons-basics{
         display: grid;
         grid-template-columns: repeat(5,auto);
         grid-gap: 10px;
         .btn, .submit{
-            background: #a50000;
+            background: #4e0000;
             border: none;
-            height: 30px;
-            width: 30px;
+            height: 20vh;
+            width: 10vw;
+            font-size: 20px;
             text-align: center;
+            color: #fff;
             &:active{
                 background: #fff;
             }
