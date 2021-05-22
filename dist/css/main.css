@@ -138,7 +138,7 @@
   }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 550px) {
   .container .input-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
