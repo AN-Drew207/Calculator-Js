@@ -44,9 +44,10 @@
     }
     .container-buttons-basics{
         display: grid;
-        grid-template-columns: repeat(5,auto);
+        grid-template-rows: repeat(4,auto);
+        grid-template-columns: repeat(6,auto);
         grid-gap: 10px;
-        .btn, .submit{
+        .btn, .submit, .erase{
             background: #4e0000;
             border: none;
             height: 20vh;

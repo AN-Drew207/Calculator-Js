@@ -80,14 +80,24 @@ function sqrtoperation(str){
     }
 }
 const input = document.querySelector('#calc');
-const output= document.querySelector('#result')
-const submit = document.querySelector('.submit')
+const output= document.querySelector('#result');
+const submit = document.querySelector('.submit');
+const eraseall = document.querySelector('#button-eraseall');
+const erase = document.querySelector('#button-erase')
 input.value = "";
 const buttons = document.querySelectorAll(".container-buttons-basics .btn");
 console.log(buttons.length);
 for (var btn of buttons) {
     button_push(btn, btn.innerText);
 }
+
+eraseall.addEventListener('click', (e) =>{
+    input.value = "";
+});
+
+erase.addEventListener('click', (e) =>{
+    input.value = input.value.substr(0,input.value.length-1);
+})
 
 submit.addEventListener('click', (e) => {
     var str = input.value;
