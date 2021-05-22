@@ -82,18 +82,10 @@
             }
         }
         .container-buttons-basics{
-            display: grid;
-            grid-template-rows: repeat(4,auto);
-            grid-template-columns: repeat(6,auto);
-            grid-gap: 10px;
             .btn, .submit, .erase, .Ans{
-                background: #4e0000;
-                border: none;
                 height: 15vh;
                 width: 13.5vw;
                 font-size: 20px;
-                text-align: center;
-                color: #fff;
             }
         }
     }
@@ -109,14 +101,34 @@
             }
         }
         .container-buttons-basics{
-            display: grid;
-            grid-template-rows: repeat(4,auto);
-            grid-template-columns: repeat(6,auto);
-            grid-gap: 10px;
             .btn, .submit, .erase, .Ans{
                 width: 13.5vw;
                 font-size: 30px;
             }
         }
     }
+}
+@media (max-height:500px) {
+    .container{
+        .input-container{
+            flex-direction: row;
+            input{
+                font-size: 20px;
+                width: 50%;
+            }
+            #result{
+                font-size: 25px;
+                width: 50%;
+                overflow-x: hidden;
+            }
+        }
+        .container-buttons-basics{
+            .btn, .submit, .erase, .Ans{
+                height: 13.5vh;
+                width: 13.5vw;
+                font-size: 20px;
+            }
+        }
+    }
+    
 }

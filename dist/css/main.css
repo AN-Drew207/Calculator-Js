@@ -118,23 +118,10 @@
     font-size: 30px;
     padding: 0px 20px;
   }
-  .container .container-buttons-basics {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: (auto)[4];
-        grid-template-rows: repeat(4, auto);
-    -ms-grid-columns: (auto)[6];
-        grid-template-columns: repeat(6, auto);
-    grid-gap: 10px;
-  }
   .container .container-buttons-basics .btn, .container .container-buttons-basics .submit, .container .container-buttons-basics .erase, .container .container-buttons-basics .Ans {
-    background: #4e0000;
-    border: none;
     height: 15vh;
     width: 13.5vw;
     font-size: 20px;
-    text-align: center;
-    color: #fff;
   }
 }
 
@@ -145,18 +132,32 @@
   .container .input-container #result {
     font-size: 50px;
   }
-  .container .container-buttons-basics {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: (auto)[4];
-        grid-template-rows: repeat(4, auto);
-    -ms-grid-columns: (auto)[6];
-        grid-template-columns: repeat(6, auto);
-    grid-gap: 10px;
-  }
   .container .container-buttons-basics .btn, .container .container-buttons-basics .submit, .container .container-buttons-basics .erase, .container .container-buttons-basics .Ans {
     width: 13.5vw;
     font-size: 30px;
+  }
+}
+
+@media (max-height: 500px) {
+  .container .input-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .input-container input {
+    font-size: 20px;
+    width: 50%;
+  }
+  .container .input-container #result {
+    font-size: 25px;
+    width: 50%;
+    overflow-x: hidden;
+  }
+  .container .container-buttons-basics .btn, .container .container-buttons-basics .submit, .container .container-buttons-basics .erase, .container .container-buttons-basics .Ans {
+    height: 13.5vh;
+    width: 13.5vw;
+    font-size: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
