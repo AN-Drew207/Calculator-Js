@@ -9,7 +9,7 @@
     align-items: center;
     background-color: #444;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
     width: 100vw;
     .input-container{
@@ -17,7 +17,7 @@
         align-items: center;
         display: flex;
         margin: 15px;
-        height: 20vh;
+        height: 15vh;
         background: #000;
         border-radius: 10px;
         width:95vw;
@@ -26,7 +26,7 @@
             border: none; 
             color: #fff;
             font-size: 40px;
-            text-align: right;
+            text-align: left;
             padding: 10px;
             margin: 10px;
             width: 70%;
@@ -47,11 +47,11 @@
         grid-template-rows: repeat(4,auto);
         grid-template-columns: repeat(6,auto);
         grid-gap: 10px;
-        .btn, .submit, .erase{
+        .btn, .submit, .erase, .Ans{
             background: #4e0000;
             border: none;
-            height: 20vh;
-            width: 10vw;
+            height: 15vh;
+            width: 15vw;
             font-size: 20px;
             text-align: center;
             color: #fff;

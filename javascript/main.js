@@ -1,6 +1,11 @@
 function button_push(btn, value) {
     btn.addEventListener('click', (e) => {
-        input.value += value;
+        if(input.value=="0"){
+            input.value = value;
+        }else{
+            input.value += value;
+        }
+        
     });
 }
 
@@ -58,7 +63,7 @@ function sqrtoperation(str){
         return str.replace(entireSqrtstr,result);
     }else if(str[positionstart+1]=="("){
 
-        for(var i=positionstart+1;str[i]!=")";i++){
+        for(var i=positionstart+1;str[i-1]!=")";++i){
             positionend = i;
             j++;
         }
@@ -73,6 +78,7 @@ function sqrtoperation(str){
                 exponentation(sqrtoper);
             }
         }
+        sqrtoper=eval(sqrtoper);
         result=Math.sqrt(sqrtoper);
         console.log(result);
         console.log(str.replace(entireSqrtstr,result));
@@ -81,10 +87,11 @@ function sqrtoperation(str){
 }
 const input = document.querySelector('#calc');
 const output= document.querySelector('#result');
-const submit = document.querySelector('.submit');
+const submit = document.querySelector('#button-equal');
 const eraseall = document.querySelector('#button-eraseall');
-const erase = document.querySelector('#button-erase')
-input.value = "";
+const erase = document.querySelector('#button-erase');
+const Ans = document.querySelector('#button-ans');
+input.value = "0";
 const buttons = document.querySelectorAll(".container-buttons-basics .btn");
 console.log(buttons.length);
 for (var btn of buttons) {
@@ -97,6 +104,10 @@ eraseall.addEventListener('click', (e) =>{
 
 erase.addEventListener('click', (e) =>{
     input.value = input.value.substr(0,input.value.length-1);
+});
+
+Ans.addEventListener('click', (e) =>{
+    input.value+=result.innerText;
 })
 
 submit.addEventListener('click', (e) => {
@@ -110,12 +121,39 @@ submit.addEventListener('click', (e) => {
     console.log(str);
     try{
         result.innerText=eval(str);
-        input.value=eval(str);
+        input.value=result.innerText;
     }catch(err){
         result.innerText="Syntax Error";
     }
     
 });
 
+document.addEventListener('keydown', (e) => {
+    if(e.keyCode==13){
+        var str = input.value;
+        var sqrtcant = detectCant(str,"√");
+        for(var i=0;i<sqrtcant;i++){
+            str = sqrtoperation(str);
+        }
+        str = exponentation(str);
+        str = exponentation10(str);
+        console.log(str);
+        try{
+            result.innerText=eval(str);
+            input.value=eval(str);
+        }catch(err){
+            result.innerText="Syntax Error";
+        }
+    }else if(e.keyCode<58&&e.keyCode>47 || e.keyCode<112&&e.keyCode>95){
+        if(input.value==0){
+            input.value=e.key;
+        }else{
+            input.value+=e.key;
+        }   
+    }else if(e.keyCode==8){
+        input.value = input.value.substr(0,input.value.length-1);
+    }
+    
+});
 
 
