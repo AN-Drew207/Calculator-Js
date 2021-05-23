@@ -22,7 +22,7 @@
         background: #000;
         border-radius: 10px;
         width:95vw;
-        input{
+        #calc{
             background-color: transparent;
             border: none; 
             color: #fff;
@@ -71,7 +71,7 @@
 @media (max-width:900px) {
     .container{
         .input-container{
-            input{
+            #calc{
                 font-size: 25px;
                 padding: 0px 10px;
                 margin: 5px 10px;
@@ -93,7 +93,7 @@
 @media (min-width:900px) {
     .container{
         .input-container{
-            input{
+            #calc{
                 font-size: 40px;
             }
             #result{
@@ -112,7 +112,7 @@
     .container{
         .input-container{
             flex-direction: row;
-            input{
+            #calc{
                 font-size: 20px;
                 width: 50%;
             }

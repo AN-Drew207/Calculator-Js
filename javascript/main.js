@@ -21,7 +21,6 @@ function detectCant(str, symbol){
 
 function exponentation (str){
     var x =detectCant(str,"^");
-    console.log(x);
     for(var i=0;i<x;i++){
        str = str.replace("^","**");
     }
@@ -29,7 +28,6 @@ function exponentation (str){
 }
 function exponentation10 (str){
     var x =detectCant(str,"E");
-    console.log(x);
     for(var i=0;i<x;i++){
        str = str.replace("E","*10**");
     }
@@ -47,9 +45,7 @@ function sqrtoperation(str){
             j++;
         }
         var sqrtoper= str.substr(positionstart+1,j);
-        console.log(sqrtoper);
         var entireSqrtstr=str.substring(positionstart,positionend+1);
-        console.log(entireSqrtstr);
         for(var i of sqrtoper){
             if(i=="√"){
                 sqrtoperation(sqrtoper);
@@ -61,8 +57,6 @@ function sqrtoperation(str){
         if(str[positionstart-1]<10&&str[positionstart-1]>=0){
             return str.replace(entireSqrtstr, `*${result}`);
         }
-        console.log(result);
-        console.log(str.replace(entireSqrtstr,result));
         return str.replace(entireSqrtstr,result);
     }else if(str[positionstart+1]=="("){
 
@@ -71,9 +65,7 @@ function sqrtoperation(str){
             j++;
         }
         var sqrtoper= str.substr(positionstart+1,j);
-        console.log(sqrtoper);
         var entireSqrtstr=str.substring(positionstart,positionend+1);
-        console.log(entireSqrtstr);
         for(var i of sqrtoper){
             if(i=="√"){
                 sqrtoperation(sqrtoper);
@@ -83,8 +75,6 @@ function sqrtoperation(str){
         }
         sqrtoper=eval(sqrtoper);
         result=Math.sqrt(sqrtoper);
-        console.log(result);
-        console.log(str.replace(entireSqrtstr,result));
         return str.replace(entireSqrtstr,result);
     }
 }
@@ -96,7 +86,6 @@ const erase = document.querySelector('#button-erase');
 const Ans = document.querySelector('#button-ans');
 input.value = "0";
 const buttons = document.querySelectorAll(".container-buttons-basics .btn");
-console.log(buttons.length);
 for (var btn of buttons) {
     button_push(btn, btn.innerText);
 }
@@ -142,7 +131,6 @@ document.addEventListener('keydown', (e) => {
         }
         str = exponentation(str);
         str = exponentation10(str);
-        console.log(str);
         try{
             result.innerText=eval(str);
             input.value=eval(str);
