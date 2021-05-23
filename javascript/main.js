@@ -58,6 +58,9 @@ function sqrtoperation(str){
             }
         }
         result=Math.sqrt(sqrtoper);
+        if(str[positionstart-1]<10&&str[positionstart-1]>=0){
+            return str.replace(entireSqrtstr, `*${result}`);
+        }
         console.log(result);
         console.log(str.replace(entireSqrtstr,result));
         return str.replace(entireSqrtstr,result);
@@ -102,12 +105,14 @@ eraseall.addEventListener('click', (e) =>{
     input.value = "";
 });
 
-erase.addEventListener('click', (e) =>{
+erase.addEventListener('click', (e) => {
     input.value = input.value.substr(0,input.value.length-1);
 });
 
 Ans.addEventListener('click', (e) =>{
-    input.value+=result.innerText;
+    if(result.innerText!="Syntax Error"){
+        input.value+=result.innerText;
+    }
 })
 
 submit.addEventListener('click', (e) => {
